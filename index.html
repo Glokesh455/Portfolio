@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lokesh G Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            background-color: #1F1F1F;
+            position: sticky;
+        }
+
+        .header nav {
+            display: flex;
+        }
+
+        .header nav a {
+            padding: 20px;
+            text-decoration: none;
+            color: aliceblue;
+        }
+
+        .home {
+            display: flex;
+            background-color: #1F1F1F;
+            height: 100vh;
+        }
+
+        .home .image-wrapper {
+            width: 50%;
+        }
+
+        .home .image-wrapper .shadow {
+            position: relative;
+        }
+
+        .home .image-wrapper .shadow .image {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-25%, 0%);
+        }
+
+        .home .info {
+            width: 50%;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            line-height: 3rem;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        .home .info .viewmyprojects {
+            width: 150px;
+            height: 40px;
+            border-radius: 20px;
+            background-color: black;
+            color: white;
+        }
+
+        .home .info .viewmyprojects:hover {
+            background-color: rgb(242, 237, 237);
+            color: rgb(8, 8, 8);
+        }
+
+        .about-section {
+            padding: 40px;
+            background-color: #dddddd;
+            color: black;
+            display: none;
+        }
+
+        .about-section h1 {
+            margin-top: 0;
+            font-size: 36px;
+            font-weight: bold;
+        }
+
+        .about-section p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .about-section h2 {
+            margin-top: 40px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .about-section li {
+            padding: 10px;
+        }
+
+        #contact {
+            background-color: #f7f7f7;
+            padding: 50px;
+            text-align: center;
+            display: none;
+            height: 100vh;
+        }
+
+        #contact h2 {
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            margin-bottom: 40px;
+        }
+
+        .contact-info p {
+            margin-bottom: 10px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        form input,
+        form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+        }
+
+        form button[type="submit"] {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        form button[type="submit"]:hover {
+            background-color: #3e8e41;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .info {
+                width: 100% !important;
+            }
+
+            .image-wrapper {
+                display: none;
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="header">
+        <nav>
+            <a href="#" onclick="showSection('home')">Home</a>
+            <!-- <a href="#" onclick="showSection('projects')">Projects</a> -->
+            <a href="#" onclick="showSection('about-section')">About</a>
+            <a href="#" onclick="showSection('contact')">Contact</a>
+        </nav>
+    </div>
+
+    <div class="home" id="home">
+        <div class="home-page" style="display: flex;">
+
+            <div class="info">
+                <div class="about">
+                    <h1>Hi, I'm Lokesh</h1>
+                    <h2>I'm a Web Developer</h2>
+                    <p>With a passion for building innovative and user-friendly applications, I specialize in creating
+                        dynamic web experiences that engage and inspire. I'm always looking to expand my skillset and
+                        stay
+                        up-to-date with the latest industry trends, pushing the boundaries of what's possible in the
+                        digital
+                        world.</p>
+                    <!-- <button type="button" class="viewmyprojects" onclick="showSection('projects')">View My -->
+                        <!-- Projects</button> -->
+                </div>
+            </div>
+            <div class="image-wrapper">
+                <div class="shadow">
+                    <img style="width: 100%;" src="./Ellipse 1.png" alt="">
+                    <div class="image">
+                        <img style="width: 100%;"
+                            src="./435387728_629273619387099_5844822007038971226_n-removebg-preview.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="about-section" id="about-section">
+        <h1>About Me</h1>
+        <h2>Skills</h2>
+        <ul>
+            <li>HTML5</li>
+            <li>CSS</li>
+            <li>SCSS</li>
+            <li>JavaScript</li>
+            <li>Angular</li>
+            <li>Git</li>
+            <li>GitHub</li>
+            <li>Responsive Web</li>
+        </ul>
+        <h2>Experience</h2>
+        <ul>
+            <li>Front-end Developer at NUNC Systems (Aug 2022 - May 2024)</li>
+        </ul>
+        <h2>Education</h2>
+        <ul>
+            <li>Bachelor's Degree of Technology, JNTUA (2022)</li>
+        </ul>
+    </div>
+
+    <div id="contact">
+        <h2>Get in Touch</h2>
+        <p>Want to collaborate or just say hello? I'd love to hear from you!</p>
+        <div class="contact-info">
+            <p>
+                <strong>Email:</strong> <a href="mailto:your-email@example.com">gundalokesh2000@gmail.com</a>
+            </p>
+            <p>
+                <strong>Phone:</strong> +91 6302513709
+            </p>
+            <p>
+                <strong>LinkedIn:</strong> <a
+                    href="https://www.linkedin.com/in/lokesh-gunda-0b7b821aa/">your-linkedin-profile</a>
+            </p>
+        </div>
+        <form>
+            <input type="text" name="name" placeholder="Your Name">
+            <input type="email" name="email" placeholder="Your Email">
+            <textarea name="message" placeholder="Your Message"></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.home, .projects, .about-section, #contact');
+            sections.forEach(section => section.style.display = 'none');
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
+</body>
+
+</html>
